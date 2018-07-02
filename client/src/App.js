@@ -1,16 +1,39 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Nav from './Components/Nav';
+import Characters from "./Components/Characters";
+import characters from "./characters.json";
 
 
-const App = () => (
-  <Router>
+class App extends Component {
+  //Set the state
+  state = {
+    characters,
+    currentScore: 0,
+    topScore: 0,
+    correctIncorrect: "",
+    clicked: [],
+  };
+
+  render() {
+    return (
     <div>
-      {/* <Nav /> Header */}
-      <Switch>
-      </Switch>
-      {/* <Nav /> Footer */}
+        <Nav
+        title='Clicky Game'
+        score={this.state.currentScore}
+        topScore={this.state.topScore}
+        correctIncorrect={this.state.correctIncorrect}
+        />
+
+        {this.state.characters.map(char => (
+          <Characters 
+          id={char.id}
+          image={char.image}
+          />
+        ))
+      }
     </div>
-  </Router>
-);
+    );
+  }
+}
 
 export default App;
