@@ -1,14 +1,15 @@
 import React from 'react';
 import "./Characters.css";
 
-const Characters = props => {
-    <div classname="charCßard" value={props.id} 
-    // onClick={() => handleClick(props.id)}
+const Characters = props => (
+    <div className="charCard" 
+    value={props.id}
+    onClick={() => props.handleClick(props.id)}
     >
         <div className="img-container">
-            <img alt={props.name} src={props.image}/>
+            <img src={props.image}/>
         </div>
     </div>
-}
+)
 
 export default Characters;

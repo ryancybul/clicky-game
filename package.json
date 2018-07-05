@@ -18,5 +18,8 @@
     "express": "^4.16.3",
     "mongoose": "^5.1.7",
     "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7"
   }
 }

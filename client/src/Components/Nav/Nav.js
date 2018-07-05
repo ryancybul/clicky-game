@@ -4,11 +4,11 @@ import "./Nav.css";
 const Nav = props => (
     <nav>
         <ul>
-            <li className="">
+            <li className="title">
                 <a href="/clicky-game/">{props.title}</a>
             </li>
 
-            <li id="">{props.corrrectIncorrect}</li>
+            <li id="cor-inc">{props.corrrectIncorrect}</li>
 
             <li id="">Score: {props.score}</li>
             
