@@ -14,7 +14,6 @@ nav {
 
 nav li {
     display: inline-block;
-    
   }
   
 ul {
@@ -25,4 +24,9 @@ ul {
     justify-content: space-around;
     padding: 10px;
     text-decoration: none;
+}
+
+#item-1 {
+    color: orange;
+    font-size: 25px;
 }

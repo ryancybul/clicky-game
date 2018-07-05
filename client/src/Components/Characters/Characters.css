@@ -1,12 +1,16 @@
 .charCard {
     border: 5px solid black;
     border-radius: 5px;
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     margin: 5px;
 }
 
 .img-container{
     height: 100%;
     overflow: hidden;
+}
+.img-container img{
+    width: 100%;
+    height: auto;
 }

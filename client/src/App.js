@@ -20,7 +20,7 @@ class App extends Component {
     characters,
     currentScore: 0,
     topScore: 0,
-    correctIncorrect: "",
+    correctIncorrect: '',
     clicked: [],
   };
 
@@ -37,12 +37,12 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      rightWrong: ""
+      correctIncorrect: ""
     });
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
     }
-    else if (newScore === 12) {
+    if (newScore === 12) {
       this.setState({ correctIncorrect: "You win!" });
     }
     this.handleShuffle();
@@ -52,7 +52,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      rightWrong: "You lost!",
+      correctIncorrect: "You lost!",
       clicked: []
     });
     this.handleShuffle();
@@ -68,12 +68,12 @@ class App extends Component {
     <div className='wrapper'>
         <Nav
         title='Arrested Development Clicky Game'
+        correctIncorrect={this.state.correctIncorrect}
         score={this.state.currentScore}
         topScore={this.state.topScore}
-        correctIncorrect={this.state.correctIncorrect}
         />
 
-        <Title>Try to click each character without clicky any single one twice</Title>
+      <Title>Try to click each character without clicky any single one twice</Title>
 
       <div className='charContainer'>  
         {this.state.characters.map(char => (
