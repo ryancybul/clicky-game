@@ -3,7 +3,7 @@
 
 ### This app is a memory game built with React. 
 
-[Play the game here!](https://dashboard.heroku.com/apps/still-sea-63287)
+[Play the game here!](https://still-sea-63287.herokuapp.com/)
 
 #### App description:
 
@@ -14,4 +14,4 @@
 3. Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
 
 4. Once the user's score is reset after an incorrect guess, the game restarts.
-
+ 
