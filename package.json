@@ -14,13 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "concurrently": "^3.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "merge": "^1.2.1",
-    "mongoose": "^5.3.14",
-    "nodemon": "^1.18.7",
-    "url-parse": "^1.4.4"
+    "mongoose": "^5.6.0",
+    "nodemon": "^1.19.1",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
