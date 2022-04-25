@@ -1,6 +1,7 @@
 .charCard {
     border: 5px solid black;
     border-radius: 5px;
+    align-self: flex-start;  
     width: 175px;
     height: 175px;
     margin: 5px;

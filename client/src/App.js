@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import Nav from './Components/Nav';
-import Characters from "./Components/Characters";
-import Title from "./Components/Title";
-import characters from "./characters.json";
-import './App.css';
-
+import React, { Component } from "react";
+import Header from "./Components/Header.js";
+import Characters from "./Components/Characters.js";
+import characters from "../src/Components/characters.json";
+import "../src/Styles/App.css";
 
 function shuffleChar(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -12,7 +10,7 @@ function shuffleChar(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
-};
+}
 
 class App extends Component {
   //Set the state
@@ -20,11 +18,11 @@ class App extends Component {
     characters,
     currentScore: 0,
     topScore: 0,
-    correctIncorrect: '',
+    correctIncorrect: "",
     clicked: [],
   };
 
-  handleClick = id => {
+  handleClick = (id) => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
       this.setState({ clicked: this.state.clicked.concat(id) });
@@ -37,7 +35,7 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      correctIncorrect: ""
+      correctIncorrect: "",
     });
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
@@ -53,7 +51,7 @@ class App extends Component {
       currentScore: 0,
       topScore: this.state.topScore,
       correctIncorrect: "You lost!",
-      clicked: []
+      clicked: [],
     });
     this.handleShuffle();
   };
@@ -65,27 +63,23 @@ class App extends Component {
 
   render() {
     return (
-    <div className='wrapper'>
-        <Nav
-        title='Arrested Development Clicky Game'
-        correctIncorrect={this.state.correctIncorrect}
-        score={this.state.currentScore}
-        topScore={this.state.topScore}
+      <div className="wrapper">
+        <Header
+          title="Arrested Development Clicky Game"
+          correctIncorrect={this.state.correctIncorrect}
+          score={this.state.currentScore}
+          topScore={this.state.topScore}
         />
-
-      <Title>Try to click each character without clicky any single one twice</Title>
-
-      <div className='charContainer'>  
-        {this.state.characters.map(char => (
-            <Characters 
-            handleClick={this.handleClick}
-            id={char.id}
-            image={char.image}
+        <div className="charContainer">
+          {this.state.characters.map((char) => (
+            <Characters
+              handleClick={this.handleClick}
+              id={char.id}
+              image={char.image}
             />
-          ))
-        }
+          ))}
+        </div>
       </div>
-    </div>
     );
   }
 }

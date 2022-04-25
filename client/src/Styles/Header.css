@@ -6,15 +6,24 @@ a {
     text-decoration: none;
 }
 
-nav {
+.headerWrapper {
     background-color: black;
     height: 50px;
     width: 100%;
 }
 
-nav li {
+.headerWrapper li {
     display: inline-block;
-  }
+}
+
+  .titleWrapper {
+    align-items: center;
+    background: white;
+    display: flex;
+    font-family: 'Heebo';
+    height: 50px;
+    justify-content: center;
+}
   
 ul {
     align-items: flex-end;
@@ -22,7 +31,6 @@ ul {
     display: flex;
     font-family: 'Heebo', cursive;
     justify-content: space-around;
-    padding: 10px;
     text-decoration: none;
 }
 
