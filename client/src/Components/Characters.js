@@ -3,7 +3,7 @@ import "../Styles/Characters.css";
 
 const Characters = (props) => (
   <div
-    className="charCard"
+    className="charCard grow"
     value={props.id}
     onClick={() => props.handleClick(props.id)}
   >
