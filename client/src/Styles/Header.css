@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:800');
 
-a {
-    color: orange;
-    font-size: 25px;
-    text-decoration: none;
+* {
+    font-family: 'Heebo', cursive;
 }
 
-ul {
-    align-items: flex-end;
-    color: white;
-    display: flex;
-    font-family: 'Heebo', cursive;
-    justify-content: space-around;
-    padding: 10px;
+h1 {
+    color: orange;
     text-decoration: none;
+    text-align: center;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 1.75rem);
+}
+
+h2 {
+    font-size: clamp(.75rem, -0.875rem + 7.5vw, 1.25rem);
+    text-align: center;
 }
 
 .headerWrapper {
-    height: 125px;
+    display: inline-block;
+    height: fit-content;
 }
 
 .instructionsWrapper {
@@ -26,22 +27,36 @@ ul {
     display: flex;
     height: 50%;
     justify-content: center;
-    font-family: 'Heebo';
+    padding: 7.5px;
+}
+
+.scoreBoard {
+    
 }
 
 .titleWrapper {
     align-items: center;
     background-color: black;
-    justify-content:space-between;
+    display: flex;
+    justify-content:space-around;
+    padding: 7.5px;
     width: 100%;
     height: 50%;
 }
 
-.titleWrapper li {
+.titleWrapper p {
+    color: white;
     display: inline-block;
+    padding: 10px;
 }
 
 #item-1 {
     color: orange;
     font-size: 25px;
+}
+
+@media (max-width: 700px) {
+    .titleWrapper {
+        flex-direction: column;
+    }
 }
