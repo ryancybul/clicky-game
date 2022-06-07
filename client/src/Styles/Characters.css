@@ -23,3 +23,14 @@
     width: 100%;
     height: auto;
 }
+
+@media (max-width: 600px) {
+    .charCard {
+        border: 5px solid black;
+        border-radius: 5px;
+        align-self: flex-start;  
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+    }
+}

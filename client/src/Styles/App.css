@@ -1,8 +1,13 @@
 .wrapper {
-    display: grid;
-    grid-template: 100px / 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: orange;
     height: 100vh;
+    max-width: 1900px;
+    margin-left: auto;
+margin-right: auto;
+    overflow: scroll;
 }
 
 .charContainer{
@@ -10,6 +15,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
     width: 100%;
+    margin: 10px;
 }

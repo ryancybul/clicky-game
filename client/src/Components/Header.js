@@ -11,8 +11,8 @@ const Header = (props) => (
       </div>
     </div>
     <div className="instructionsWrapper">
-      <p id="item-1">{props.correctIncorrect}</p>
-      <h2>Try to click each character without clicky any single one twice</h2>
+      {/* <p id="item-1">{props.correctIncorrect}</p> */}
+      <h2>{props.correctIncorrect}</h2>
     </div>
   </div>
 );

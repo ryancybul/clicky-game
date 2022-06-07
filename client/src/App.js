@@ -18,7 +18,8 @@ class App extends Component {
     characters,
     currentScore: 0,
     topScore: 0,
-    correctIncorrect: "",
+    correctIncorrect:
+      "Try to click each character without clicking any single one twice.",
     clicked: [],
   };
 
@@ -35,13 +36,17 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      correctIncorrect: "",
+      correctIncorrect:
+        "Try to click each character without clicking any single one twice.",
     });
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
     }
     if (newScore === 12) {
-      this.setState({ correctIncorrect: "You win!" });
+      this.setState({
+        correctIncorrect:
+          "You got all twelve! Click any character to play again.",
+      });
     }
     this.handleShuffle();
   };
@@ -50,7 +55,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      correctIncorrect: "You lost!",
+      correctIncorrect: "You lost! Click any character to play again.",
       clicked: [],
     });
     this.handleShuffle();
