@@ -3,7 +3,7 @@
 
 ### This app is a memory game built with React. 
 
-[Play the game here!](https://still-sea-63287.herokuapp.com/)
+[Play the game here!](https://629f5242c3dc5a062934ec7c--marvelous-macaron-26e896.netlify.app/)
 
 #### App description:
 
